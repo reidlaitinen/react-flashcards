@@ -17,7 +17,9 @@ class Card extends React.Component {
         <Container textalign='center'>
           {this.props.answer}
           <br/><br/>
+          <Button centered onClick={() => this.props.deleteCard(this.props.cardId)}>Delete Card</Button>
           <Button centered onClick={this.flipCard}>Flip Card</Button>
+          <Button centered onClick={() => this.props.editCard(this.props.cardId)}>Edit Card</Button>
         </Container>
       )
     } else {

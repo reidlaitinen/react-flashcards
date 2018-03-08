@@ -14,6 +14,18 @@ class App extends Component {
     ]
   }
 
+  editCard = (id) => {
+
+  }
+
+  deleteCard = (id) => {
+    const {flashCards} = this.state;
+    let newArr= flashCards.filter( card => {
+      return card.id !== id
+    })
+    this.setState({flashCards: newArr})
+  }
+
   render() {
     return (
       <div className="App">
@@ -25,6 +37,8 @@ class App extends Component {
         <div>
           <List 
             flashCards={this.state.flashCards}
+            editCard={this.editCard}
+            deleteCard={this.deleteCard}
           />
 
         </div>
