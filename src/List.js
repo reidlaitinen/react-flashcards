@@ -2,7 +2,7 @@ import React from 'react';
 import {Segment, Divider} from 'semantic-ui-react';
 import Card from './Card'
 
-const List = ( {flashCards, flipCard}) => (
+const List = ( {flashCards}) => (
 
     <Segment padded>
       { flashCards.map( card => 
@@ -10,8 +10,8 @@ const List = ( {flashCards, flipCard}) => (
           <Divider horizontal>Card # {card.id}</Divider>
           <Card
             key={card.id}
-            text={card.question}
-            flipCard={flipCard}
+            question={card.question}
+            answer={card.answer}
           />
         </div>
       )}

@@ -14,10 +14,6 @@ class App extends Component {
     ]
   }
 
-  flipCard = (id) => {
-
-  }
-
   render() {
     return (
       <div className="App">
